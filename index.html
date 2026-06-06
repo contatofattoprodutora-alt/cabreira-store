@@ -415,6 +415,71 @@ footer{background:#f0f0f0;border-top:3px solid var(--neon);padding:1.5rem 2rem;d
   0%{transform:scale(1);opacity:0.8;}
   100%{transform:scale(1.8);opacity:0;}
 }
+
+/* ===== CARROSSEL LOJA ===== */
+.carrossel-section{background:#111;padding:3rem 0;overflow:hidden;}
+.carrossel-header{text-align:center;margin-bottom:2rem;}
+.carrossel-title{font-family:'Rajdhani',sans-serif;font-size:1.5rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#fff;margin-bottom:0.3rem;}
+.carrossel-sub{font-size:0.85rem;color:#888;}
+.carrossel-track-wrap{overflow:hidden;position:relative;}
+.carrossel-track-wrap::before,.carrossel-track-wrap::after{content:'';position:absolute;top:0;bottom:0;width:80px;z-index:2;}
+.carrossel-track-wrap::before{left:0;background:linear-gradient(to right,#111,transparent);}
+.carrossel-track-wrap::after{right:0;background:linear-gradient(to left,#111,transparent);}
+.carrossel-track{display:flex;gap:16px;animation:scrollCarrossel 30s linear infinite;width:max-content;}
+.carrossel-track:hover{animation-play-state:paused;}
+@keyframes scrollCarrossel{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+.carrossel-slide{width:280px;height:200px;border-radius:12px;overflow:hidden;flex-shrink:0;background:var(--bg2);border:2px solid #222;position:relative;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;}
+.carrossel-slide-emoji{font-size:3.5rem;}
+.carrossel-slide-label{font-family:'Rajdhani',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#555;}
+.carrossel-slide:hover{border-color:var(--neon);transition:border-color .3s;}
+
+/* ===== DEPOIMENTOS ===== */
+.depoimentos-section{background:#fff;padding:3rem 4rem;}
+.depo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:1.5rem;}
+.depo-card{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:1.5rem;position:relative;transition:all .2s;}
+.depo-card:hover{border-color:var(--neon);box-shadow:0 4px 16px var(--neon-glow);}
+.depo-aspas{font-size:3rem;color:var(--neon);line-height:0.5;margin-bottom:1rem;font-family:Georgia,serif;}
+.depo-texto{font-size:0.88rem;color:#444;line-height:1.7;margin-bottom:1.2rem;}
+.depo-autor{display:flex;align-items:center;gap:10px;}
+.depo-avatar{width:44px;height:44px;border-radius:50%;background:var(--neon);display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:700;color:#000;font-family:'Rajdhani',sans-serif;flex-shrink:0;}
+.depo-nome{font-size:0.85rem;font-weight:700;color:#111;}
+.depo-local{font-size:0.72rem;color:var(--muted);}
+.depo-estrelas{color:#f59e0b;font-size:0.85rem;margin-top:2px;}
+
+/* ===== CONTADORES ===== */
+.contadores-section{background:var(--bg2);padding:2.5rem 4rem;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.contadores-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;}
+.contador-item{text-align:center;padding:1.5rem;}
+.contador-num{font-family:'Rajdhani',sans-serif;font-size:2.8rem;font-weight:700;color:var(--neon);line-height:1;}
+.contador-plus{font-family:'Rajdhani',sans-serif;font-size:2rem;color:var(--neon);}
+.contador-label{font-size:0.82rem;color:var(--muted);margin-top:6px;letter-spacing:1px;text-transform:uppercase;}
+.contador-icon{font-size:2rem;margin-bottom:0.5rem;}
+
+/* ===== ADMIN EXTRAS ===== */
+.badge-warning{background:#fff8e1;color:#b45309;border:1px solid #fcd34d;font-size:0.62rem;font-weight:700;padding:3px 8px;border-radius:20px;letter-spacing:1px;text-transform:uppercase;}
+.badge-danger{background:#fff0f0;color:var(--danger);border:1px solid #f5c5be;font-size:0.62rem;font-weight:700;padding:3px 8px;border-radius:20px;letter-spacing:1px;text-transform:uppercase;}
+.cupom-tag{display:inline-flex;align-items:center;gap:6px;background:var(--neon-light);border:1px solid var(--neon);border-radius:6px;padding:4px 10px;font-size:0.78rem;font-weight:700;color:#111;margin:4px;}
+.cupom-tag-x{background:none;border:none;cursor:pointer;color:var(--muted);font-size:0.9rem;padding:0;}
+.cupom-tag-x:hover{color:var(--danger);}
+.config-item{display:flex;align-items:center;justify-content:space-between;padding:1rem 0;border-bottom:1px solid var(--border);}
+.config-item:last-child{border-bottom:none;}
+.config-label{font-size:0.85rem;font-weight:600;color:#111;}
+.config-sub{font-size:0.72rem;color:var(--muted);margin-top:2px;}
+.config-input{border:1.5px solid var(--border);border-radius:8px;padding:8px 12px;font-family:'Exo 2',sans-serif;font-size:0.85rem;outline:none;transition:border-color .2s;min-width:220px;}
+.config-input:focus{border-color:var(--neon);}
+.btn-save-config{background:var(--neon);color:#000;border:none;padding:10px 24px;font-family:'Rajdhani',sans-serif;font-size:0.9rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;border-radius:8px;margin-top:1rem;}
+.btn-save-config:hover{background:#22aa0c;}
+.estoque-alerta{background:#fff8e1;border:1px solid #fcd34d;border-radius:10px;padding:1rem;margin-bottom:1rem;display:flex;align-items:center;gap:10px;}
+.estoque-alerta-icon{font-size:1.4rem;}
+.estoque-alerta-text{font-size:0.82rem;color:#b45309;}
+.depo-admin-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:1rem;margin-bottom:10px;display:flex;align-items:start;justify-content:space-between;gap:1rem;}
+.depo-admin-info{flex:1;}
+.depo-admin-nome{font-size:0.85rem;font-weight:700;color:#111;margin-bottom:3px;}
+.depo-admin-texto{font-size:0.78rem;color:var(--muted);line-height:1.5;}
+.banner-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:1rem;margin-bottom:10px;display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+.banner-info{flex:1;}
+.banner-titulo{font-size:0.88rem;font-weight:700;color:#111;}
+.banner-sub{font-size:0.72rem;color:var(--muted);}
 </style>
 </head>
 <body>
@@ -484,7 +549,80 @@ footer{background:#f0f0f0;border-top:3px solid var(--neon);padding:1.5rem 2rem;d
       <div class="prod-card" data-nav="produto"><div class="prod-img">🕹️</div><div class="prod-info"><div class="prod-tag">PlayStation 3</div><div class="prod-name">PS3 Turbinado 160GB</div><div class="prod-row"><span class="prod-old">R$ 799</span><span class="prod-badge">TURBO</span></div><div class="prod-price">R$ 699</div><button class="prod-btn" data-nav="produto">Ver Produto</button></div></div>
     </div>
   </section>
-  <div class="promo-banner">
+  
+<!-- CARROSSEL LOJA FÍSICA -->
+<div class="carrossel-section">
+  <div class="carrossel-header">
+    <div class="carrossel-title">Nossa Loja Física</div>
+    <div class="carrossel-sub">Venha nos visitar em Criciúma — SC</div>
+  </div>
+  <div class="carrossel-track-wrap">
+    <div class="carrossel-track" id="carrosselTrack">
+      <div class="carrossel-slide"><div class="carrossel-slide-emoji">🏪</div><div class="carrossel-slide-label">Fachada da Loja</div></div>
+      <div class="carrossel-slide"><div class="carrossel-slide-emoji">🎮</div><div class="carrossel-slide-label">Seção PlayStation</div></div>
+      <div class="carrossel-slide"><div class="carrossel-slide-emoji">🎯</div><div class="carrossel-slide-label">Seção Xbox</div></div>
+      <div class="carrossel-slide"><div class="carrossel-slide-emoji">🕹️</div><div class="carrossel-slide-label">Controles & Acessórios</div></div>
+      <div class="carrossel-slide"><div class="carrossel-slide-emoji">📀</div><div class="carrossel-slide-label">Jogos Físicos</div></div>
+      <div class="carrossel-slide"><div class="carrossel-slide-emoji">👑</div><div class="carrossel-slide-label">Atendimento</div></div>
+      <div class="carrossel-slide"><div class="carrossel-slide-emoji">🏪</div><div class="carrossel-slide-label">Fachada da Loja</div></div>
+      <div class="carrossel-slide"><div class="carrossel-slide-emoji">🎮</div><div class="carrossel-slide-label">Seção PlayStation</div></div>
+      <div class="carrossel-slide"><div class="carrossel-slide-emoji">🎯</div><div class="carrossel-slide-label">Seção Xbox</div></div>
+      <div class="carrossel-slide"><div class="carrossel-slide-emoji">🕹️</div><div class="carrossel-slide-label">Controles & Acessórios</div></div>
+      <div class="carrossel-slide"><div class="carrossel-slide-emoji">📀</div><div class="carrossel-slide-label">Jogos Físicos</div></div>
+      <div class="carrossel-slide"><div class="carrossel-slide-emoji">👑</div><div class="carrossel-slide-label">Atendimento</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTADORES -->
+<div class="contadores-section">
+  <div class="contadores-grid">
+    <div class="contador-item"><div class="contador-icon">👥</div><div><span class="contador-num" data-target="15000">0</span><span class="contador-plus">+</span></div><div class="contador-label">Clientes Atendidos</div></div>
+    <div class="contador-item"><div class="contador-icon">🎮</div><div><span class="contador-num" data-target="500">0</span><span class="contador-plus">+</span></div><div class="contador-label">Produtos Disponíveis</div></div>
+    <div class="contador-item"><div class="contador-icon">⭐</div><div><span class="contador-num" data-target="4">0</span><span class="contador-plus">.9</span></div><div class="contador-label">Avaliação Média</div></div>
+    <div class="contador-item"><div class="contador-icon">🚚</div><div><span class="contador-num" data-target="48">0</span><span class="contador-plus">h</span></div><div class="contador-label">Entrega Rápida</div></div>
+    <div class="contador-item"><div class="contador-icon">🏆</div><div><span class="contador-num" data-target="3">0</span><span class="contador-plus"> anos</span></div><div class="contador-label">No Mercado</div></div>
+  </div>
+</div>
+
+<!-- DEPOIMENTOS -->
+<div class="depoimentos-section">
+  <div class="section-header"><div class="section-accent"></div><div class="section-title">O que nossos clientes dizem</div><div class="section-line"></div></div>
+  <div class="depo-grid" id="depoGrid">
+    <div class="depo-card">
+      <div class="depo-aspas">"</div>
+      <div class="depo-texto">Comprei meu PS5 na Cabreira Store e foi a melhor experiência! Preço justo, entrega rápida e produto original. Com certeza vou comprar mais vezes!</div>
+      <div class="depo-autor"><div class="depo-avatar">CM</div><div><div class="depo-nome">Carlos Mendes</div><div class="depo-local">📍 Criciúma, SC</div><div class="depo-estrelas">★★★★★</div></div></div>
+    </div>
+    <div class="depo-card">
+      <div class="depo-aspas">"</div>
+      <div class="depo-texto">Atendimento excelente! Me ajudaram a escolher o melhor console para meu filho. O PS3 turbinado chegou perfeito e ele adorou. Super recomendo!</div>
+      <div class="depo-autor"><div class="depo-avatar">AP</div><div><div class="depo-nome">Ana Paula Rocha</div><div class="depo-local">📍 Içara, SC</div><div class="depo-estrelas">★★★★★</div></div></div>
+    </div>
+    <div class="depo-card">
+      <div class="depo-aspas">"</div>
+      <div class="depo-texto">Melhor loja de games da região! Fui pessoalmente e o atendimento foi top. Saí com meu Xbox Series S por um preço incrível. Voltarei sempre!</div>
+      <div class="depo-autor"><div class="depo-avatar">RF</div><div><div class="depo-nome">Ricardo Fernandes</div><div class="depo-local">📍 Tubarão, SC</div><div class="depo-estrelas">★★★★★</div></div></div>
+    </div>
+    <div class="depo-card">
+      <div class="depo-aspas">"</div>
+      <div class="depo-texto">Comprei pelo site e foi muito fácil! Paguei no Pix e recebi em 2 dias. Produto lacrado e original. A Cabreira Store é confiança total!</div>
+      <div class="depo-autor"><div class="depo-avatar">JS</div><div><div class="depo-nome">Juliana Santos</div><div class="depo-local">📍 Florianópolis, SC</div><div class="depo-estrelas">★★★★★</div></div></div>
+    </div>
+    <div class="depo-card">
+      <div class="depo-aspas">"</div>
+      <div class="depo-texto">O PS2 com OPL que comprei está funcionando perfeitamente! Muita saudade desses clássicos. Obrigado pela qualidade e pelo preço honesto!</div>
+      <div class="depo-autor"><div class="depo-avatar">MO</div><div><div class="depo-nome">Marcos Oliveira</div><div class="depo-local">📍 Araranguá, SC</div><div class="depo-estrelas">★★★★★</div></div></div>
+    </div>
+    <div class="depo-card">
+      <div class="depo-aspas">"</div>
+      <div class="depo-texto">Fiz meu primeiro pedido com receio mas foi perfeito! Embalagem caprichada, produto original e chegou antes do prazo. Já indiquei para vários amigos!</div>
+      <div class="depo-autor"><div class="depo-avatar">LC</div><div><div class="depo-nome">Letícia Costa</div><div class="depo-local">📍 Joinville, SC</div><div class="depo-estrelas">★★★★★</div></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="promo-banner">
     <div><div class="promo-tag">⚡ Oferta Relâmpago</div><div class="promo-title">Frete Grátis em Todo o Brasil</div><div class="promo-desc">Nas compras acima de R$ 299 — direto da Cabreira Store para você</div></div>
     <div><div class="promo-num">GRÁTIS</div><div class="promo-off">no frete hoje</div></div>
   </div>
@@ -832,7 +970,12 @@ footer{background:#f0f0f0;border-top:3px solid var(--neon);padding:1.5rem 2rem;d
       <div style="flex:1;padding:0.8rem 0;">
         <div class="admin-menu-section">Principal</div>
         <div class="admin-menu-item active" data-apg="dashboard"><div class="mi-icon">📊</div><div class="mi-label">Dashboard</div></div>
-        <div class="admin-menu-section">Catálogo</div>
+        <div class="admin-menu-item" data-apg="abanners"><div class="mi-icon">🎯</div><div class="mi-label">Banners</div></div>
+      <div class="admin-menu-item" data-apg="acupons"><div class="mi-icon">🎟️</div><div class="mi-label">Cupons</div></div>
+      <div class="admin-menu-item" data-apg="aestoque"><div class="mi-icon">📦</div><div class="mi-label">Estoque</div></div>
+      <div class="admin-menu-item" data-apg="adepoimentos"><div class="mi-icon">⭐</div><div class="mi-label">Avaliações</div></div>
+      <div class="admin-menu-item" data-apg="aconfigs"><div class="mi-icon">⚙️</div><div class="mi-label">Configurações</div></div>
+      <div class="admin-menu-section">Catálogo</div>
         <div class="admin-menu-item" data-apg="acategorias"><div class="mi-icon">📁</div><div class="mi-label">Categorias</div></div>
         <div class="admin-menu-item" data-apg="aprodutos"><div class="mi-icon">🎮</div><div class="mi-label">Produtos</div></div>
       </div>
@@ -894,6 +1037,93 @@ footer{background:#f0f0f0;border-top:3px solid var(--neon);padding:1.5rem 2rem;d
         </div>
       </div>
 
+
+      <!-- BANNERS -->
+      <div class="admin-pg" id="admin-pg-abanners">
+        <div class="admin-pg-header">
+          <div><div class="admin-pg-title">Banners & Promoções</div><div class="admin-pg-sub">Gerencie os banners da loja</div></div>
+          <button class="btn-add-admin" id="btnAddBanner">+ Novo Banner</button>
+        </div>
+        <div class="panel-a">
+          <div class="panel-a-header"><div class="panel-a-title">Banners Ativos</div></div>
+          <div class="panel-a-body" id="bannersBody">
+            <div class="banner-card"><div style="font-size:1.5rem;">⚡</div><div class="banner-info"><div class="banner-titulo">Frete Grátis acima de R$ 299</div><div class="banner-sub">Ativo · Home page</div></div><span class="badge-status badge-ativo">Ativo</span><div class="action-btns"><button class="action-btn edit" data-aaction="editbanner" data-aid="1">✏️</button><button class="action-btn del" data-aaction="delbanner" data-aid="1">🗑</button></div></div>
+            <div class="banner-card"><div style="font-size:1.5rem;">🎮</div><div class="banner-info"><div class="banner-titulo">PS5 com 15% de desconto</div><div class="banner-sub">Ativo · Página de produto</div></div><span class="badge-status badge-destaque">Destaque</span><div class="action-btns"><button class="action-btn edit" data-aaction="editbanner" data-aid="2">✏️</button><button class="action-btn del" data-aaction="delbanner" data-aid="2">🗑</button></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CUPONS -->
+      <div class="admin-pg" id="admin-pg-acupons">
+        <div class="admin-pg-header">
+          <div><div class="admin-pg-title">Cupons de Desconto</div><div class="admin-pg-sub" id="aSubCupons">2 cupons ativos</div></div>
+          <button class="btn-add-admin" id="btnAddCupom">+ Novo Cupom</button>
+        </div>
+        <div class="panel-a">
+          <div class="panel-a-header"><div class="panel-a-title">Cupons Cadastrados</div></div>
+          <div class="panel-a-body">
+            <table class="data-table">
+              <thead><tr><th>Código</th><th>Desconto</th><th>Usos</th><th>Validade</th><th>Status</th><th>Ações</th></tr></thead>
+              <tbody id="cuponsBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ESTOQUE -->
+      <div class="admin-pg" id="admin-pg-aestoque">
+        <div class="admin-pg-header">
+          <div><div class="admin-pg-title">Controle de Estoque</div><div class="admin-pg-sub">Produtos com estoque baixo em alerta</div></div>
+        </div>
+        <div class="estoque-alerta" id="estoqueAlerta">
+          <div class="estoque-alerta-icon">⚠️</div>
+          <div class="estoque-alerta-text" id="estoqueAlertaText">Verificando estoque...</div>
+        </div>
+        <div class="panel-a">
+          <div class="panel-a-header"><div class="panel-a-title">Todos os Produtos — Estoque</div></div>
+          <div class="panel-a-body">
+            <table class="data-table">
+              <thead><tr><th>Produto</th><th>Categoria</th><th>Estoque</th><th>Status</th><th>Ação</th></tr></thead>
+              <tbody id="estoqueBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- DEPOIMENTOS -->
+      <div class="admin-pg" id="admin-pg-adepoimentos">
+        <div class="admin-pg-header">
+          <div><div class="admin-pg-title">Avaliações de Clientes</div><div class="admin-pg-sub">Gerencie os depoimentos exibidos no site</div></div>
+          <button class="btn-add-admin" id="btnAddDepo">+ Nova Avaliação</button>
+        </div>
+        <div class="panel-a">
+          <div class="panel-a-header"><div class="panel-a-title">Depoimentos Cadastrados</div></div>
+          <div class="panel-a-body" id="depoAdminBody">
+            <div class="depo-admin-card"><div style="font-size:1.5rem;">⭐</div><div class="depo-admin-info"><div class="depo-admin-nome">Carlos Mendes — Criciúma, SC ★★★★★</div><div class="depo-admin-texto">Comprei meu PS5 na Cabreira Store e foi a melhor experiência!</div></div><div class="action-btns"><button class="action-btn del">🗑</button></div></div>
+            <div class="depo-admin-card"><div style="font-size:1.5rem;">⭐</div><div class="depo-admin-info"><div class="depo-admin-nome">Ana Paula Rocha — Içara, SC ★★★★★</div><div class="depo-admin-texto">Atendimento excelente! Me ajudaram a escolher o melhor console.</div></div><div class="action-btns"><button class="action-btn del">🗑</button></div></div>
+            <div class="depo-admin-card"><div style="font-size:1.5rem;">⭐</div><div class="depo-admin-info"><div class="depo-admin-nome">Ricardo Fernandes — Tubarão, SC ★★★★★</div><div class="depo-admin-texto">Melhor loja de games da região! Fui pessoalmente e o atendimento foi top.</div></div><div class="action-btns"><button class="action-btn del">🗑</button></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONFIGURAÇÕES -->
+      <div class="admin-pg" id="admin-pg-aconfigs">
+        <div class="admin-pg-header">
+          <div><div class="admin-pg-title">Configurações da Loja</div><div class="admin-pg-sub">Personalize as informações da Cabreira Store</div></div>
+        </div>
+        <div class="panel-a">
+          <div class="panel-a-header"><div class="panel-a-title">Informações Gerais</div></div>
+          <div class="panel-a-body">
+            <div class="config-item"><div><div class="config-label">Nome da Loja</div><div class="config-sub">Exibido no header e footer</div></div><input class="config-input" id="cfgNome" value="Cabreira Store"></div>
+            <div class="config-item"><div><div class="config-label">WhatsApp</div><div class="config-sub">Número com DDD e código do país</div></div><input class="config-input" id="cfgWhats" value="5548988223759"></div>
+            <div class="config-item"><div><div class="config-label">Cidade / Estado</div><div class="config-sub">Exibido na seção da loja física</div></div><input class="config-input" id="cfgCidade" value="Criciúma, SC"></div>
+            <div class="config-item"><div><div class="config-label">Frete Grátis acima de</div><div class="config-sub">Valor mínimo para frete grátis</div></div><input class="config-input" id="cfgFrete" value="R$ 299"></div>
+            <div class="config-item"><div><div class="config-label">Desconto Pix (%)</div><div class="config-sub">Percentual de desconto no Pix</div></div><input class="config-input" id="cfgPix" value="10"></div>
+            <button class="btn-save-config" id="btnSaveConfig">💾 Salvar Configurações</button>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
@@ -937,6 +1167,45 @@ footer{background:#f0f0f0;border-top:3px solid var(--neon);padding:1.5rem 2rem;d
       <div class="modal-form-group"><label class="modal-form-label">Badge</label><input class="modal-form-input" id="mProdBadge" placeholder="Ex: NOVO, OFERTA, -20%"></div>
     </div>
     <div class="modal-footer"><button class="btn-modal-cancel" id="cancelModalProd">Cancelar</button><button class="btn-modal-save" id="saveModalProd">Salvar</button></div>
+  </div>
+</div>
+
+
+<!-- MODAL CUPOM -->
+<div class="modal-overlay" id="modalCupomAdmin">
+  <div class="modal-box">
+    <div class="modal-header"><div class="modal-title">Novo Cupom</div><button class="modal-close" id="closeModalCupom">✕</button></div>
+    <div class="modal-body">
+      <div class="modal-form-group"><label class="modal-form-label">Código do Cupom</label><input class="modal-form-input" id="mCupomCodigo" placeholder="Ex: CABREIRA10" style="text-transform:uppercase;"></div>
+      <div class="modal-form-row">
+        <div class="modal-form-group"><label class="modal-form-label">Desconto (%)</label><input class="modal-form-input" type="number" id="mCupomDesc" placeholder="10" min="1" max="100"></div>
+        <div class="modal-form-group"><label class="modal-form-label">Limite de usos</label><input class="modal-form-input" type="number" id="mCupomUsos" placeholder="100"></div>
+      </div>
+      <div class="modal-form-group"><label class="modal-form-label">Validade</label><input class="modal-form-input" type="date" id="mCupomValidade"></div>
+    </div>
+    <div class="modal-footer"><button class="btn-modal-cancel" id="cancelModalCupom">Cancelar</button><button class="btn-modal-save" id="saveModalCupom">Salvar Cupom</button></div>
+  </div>
+</div>
+
+<!-- MODAL DEPOIMENTO -->
+<div class="modal-overlay" id="modalDepoAdmin">
+  <div class="modal-box">
+    <div class="modal-header"><div class="modal-title">Nova Avaliação</div><button class="modal-close" id="closeModalDepo">✕</button></div>
+    <div class="modal-body">
+      <div class="modal-form-row">
+        <div class="modal-form-group"><label class="modal-form-label">Nome do Cliente</label><input class="modal-form-input" id="mDepoNome" placeholder="Ex: João Silva"></div>
+        <div class="modal-form-group"><label class="modal-form-label">Cidade</label><input class="modal-form-input" id="mDepoCidade" placeholder="Ex: Criciúma, SC"></div>
+      </div>
+      <div class="modal-form-group"><label class="modal-form-label">Depoimento</label><textarea class="modal-form-input" id="mDepoTexto" rows="3" placeholder="O que o cliente disse..."></textarea></div>
+      <div class="modal-form-group"><label class="modal-form-label">Avaliação</label>
+        <select class="modal-form-input" id="mDepoEstrelas">
+          <option value="★★★★★">★★★★★ — 5 estrelas</option>
+          <option value="★★★★☆">★★★★☆ — 4 estrelas</option>
+          <option value="★★★☆☆">★★★☆☆ — 3 estrelas</option>
+        </select>
+      </div>
+    </div>
+    <div class="modal-footer"><button class="btn-modal-cancel" id="cancelModalDepo">Cancelar</button><button class="btn-modal-save" id="saveModalDepo">Salvar Avaliação</button></div>
   </div>
 </div>
 
@@ -1358,6 +1627,162 @@ document.querySelectorAll('.modal-overlay').forEach(function(o){
 renderAdminCats();
 renderAdminProds();
 recalcCart();
+
+
+// ===== CONTADORES ANIMADOS =====
+function animarContadores(){
+  var counters = document.querySelectorAll('.contador-num[data-target]');
+  counters.forEach(function(el){
+    var target = parseInt(el.dataset.target);
+    var duration = 2000;
+    var step = target / (duration / 16);
+    var current = 0;
+    var timer = setInterval(function(){
+      current += step;
+      if(current >= target){current=target;clearInterval(timer);}
+      el.textContent = Math.floor(current).toLocaleString('pt-BR');
+    },16);
+  });
+}
+var contadorObserver = new IntersectionObserver(function(entries){
+  entries.forEach(function(entry){
+    if(entry.isIntersecting){animarContadores();contadorObserver.disconnect();}
+  });
+},{threshold:0.3});
+var contSection = document.querySelector('.contadores-section');
+if(contSection) contadorObserver.observe(contSection);
+
+// ===== ADMIN EXTRAS =====
+var cupons = [
+  {id:1,codigo:'CABREIRA10',desconto:10,usos:47,limite:100,validade:'2025-12-31',status:'ativo'},
+  {id:2,codigo:'FRETEGRATIS',desconto:0,usos:12,limite:50,validade:'2025-11-30',status:'ativo'}
+];
+var nextCupomId=3;
+
+function renderCupons(){
+  var html='';
+  cupons.forEach(function(c){
+    var badge=c.status==='ativo'?'<span class="badge-status badge-ativo">Ativo</span>':'<span class="badge-status badge-inativo">Inativo</span>';
+    html+='<tr>'
+      +'<td><strong style="font-family:Rajdhani,sans-serif;font-size:1rem;letter-spacing:1px;">'+c.codigo+'</strong></td>'
+      +'<td>'+(c.desconto>0?c.desconto+'%':'Frete Grátis')+'</td>'
+      +'<td>'+c.usos+'/'+c.limite+'</td>'
+      +'<td style="font-size:0.78rem;">'+c.validade+'</td>'
+      +'<td>'+badge+'</td>'
+      +'<td><div class="action-btns"><button class="action-btn del" data-aaction="delcupom" data-aid="'+c.id+'">🗑</button></div></td>'
+      +'</tr>';
+  });
+  document.getElementById('cuponsBody').innerHTML=html||'<tr><td colspan="6" style="text-align:center;color:var(--muted);padding:2rem;">Nenhum cupom</td></tr>';
+  document.getElementById('aSubCupons').textContent=cupons.filter(function(c){return c.status==='ativo';}).length+' cupons ativos';
+}
+
+function renderEstoque(){
+  var tbody=document.getElementById('estoqueBody');
+  var alertas=prods.filter(function(p){return p.estoque<5;});
+  document.getElementById('estoqueAlertaText').textContent=alertas.length>0?alertas.length+' produto(s) com estoque baixo (menos de 5 unidades)!':'Todos os produtos com estoque normal ✅';
+  document.getElementById('estoqueAlerta').style.background=alertas.length>0?'#fff8e1':'#f0fff0';
+  var html='';
+  prods.forEach(function(prod){
+    var badge=prod.estoque===0?'<span class="badge-status badge-danger">Esgotado</span>':prod.estoque<5?'<span class="badge-status badge-warning">Baixo</span>':'<span class="badge-status badge-ativo">Normal</span>';
+    html+='<tr>'
+      +'<td><div style="display:flex;align-items:center;gap:8px;"><div class="item-emoji-a">'+prod.emoji+'</div><div class="item-name-a">'+prod.nome+'</div></div></td>'
+      +'<td style="font-size:0.78rem;">'+getCatNome(prod.catId)+'</td>'
+      +'<td><strong style="color:'+(prod.estoque<5?'var(--danger)':'#111')+'">'+prod.estoque+'</strong></td>'
+      +'<td>'+badge+'</td>'
+      +'<td><button class="action-btn edit" data-aaction="editprod" data-aid="'+prod.id+'" title="Editar estoque">✏️</button></td>'
+      +'</tr>';
+  });
+  tbody.innerHTML=html;
+}
+
+// Admin menu extras
+document.querySelectorAll('.admin-menu-item[data-apg]').forEach(function(item){
+  item.addEventListener('click',function(){
+    var pg=this.dataset.apg;
+    if(pg==='acupons')renderCupons();
+    if(pg==='aestoque')renderEstoque();
+  });
+});
+
+// Cupom actions
+document.addEventListener('click',function(e){
+  var btn=e.target.closest('[data-aaction]');
+  if(!btn)return;
+  var action=btn.dataset.aaction, id=parseInt(btn.dataset.aid);
+  if(action==='delcupom'){
+    if(!confirm('Excluir cupom?'))return;
+    cupons=cupons.filter(function(c){return c.id!==id;});
+    renderCupons();toast('Cupom excluído!','success');
+  }
+  if(action==='delbanner'){
+    if(!confirm('Excluir banner?'))return;
+    btn.closest('.banner-card').remove();
+    toast('Banner excluído!','success');
+  }
+});
+
+// Modal Cupom
+document.getElementById('btnAddCupom').addEventListener('click',function(){
+  document.getElementById('mCupomCodigo').value='';
+  document.getElementById('mCupomDesc').value='';
+  document.getElementById('mCupomUsos').value='100';
+  document.getElementById('mCupomValidade').value='';
+  document.getElementById('modalCupomAdmin').classList.add('open');
+});
+document.getElementById('closeModalCupom').addEventListener('click',function(){document.getElementById('modalCupomAdmin').classList.remove('open');});
+document.getElementById('cancelModalCupom').addEventListener('click',function(){document.getElementById('modalCupomAdmin').classList.remove('open');});
+document.getElementById('saveModalCupom').addEventListener('click',function(){
+  var codigo=document.getElementById('mCupomCodigo').value.trim().toUpperCase();
+  var desc=parseInt(document.getElementById('mCupomDesc').value);
+  if(!codigo){toast('Informe o código!','error');return;}
+  cupons.push({id:nextCupomId++,codigo:codigo,desconto:desc||0,usos:0,limite:parseInt(document.getElementById('mCupomUsos').value)||100,validade:document.getElementById('mCupomValidade').value||'Sem validade',status:'ativo'});
+  document.getElementById('modalCupomAdmin').classList.remove('open');
+  renderCupons();toast('Cupom criado!','success');
+  addLog('🎟️','Novo cupom: '+codigo);
+});
+
+// Modal Depoimento
+document.getElementById('btnAddDepo').addEventListener('click',function(){
+  document.getElementById('mDepoNome').value='';
+  document.getElementById('mDepoCidade').value='';
+  document.getElementById('mDepoTexto').value='';
+  document.getElementById('modalDepoAdmin').classList.add('open');
+});
+document.getElementById('closeModalDepo').addEventListener('click',function(){document.getElementById('modalDepoAdmin').classList.remove('open');});
+document.getElementById('cancelModalDepo').addEventListener('click',function(){document.getElementById('modalDepoAdmin').classList.remove('open');});
+document.getElementById('saveModalDepo').addEventListener('click',function(){
+  var nome=document.getElementById('mDepoNome').value.trim();
+  var cidade=document.getElementById('mDepoCidade').value.trim();
+  var texto=document.getElementById('mDepoTexto').value.trim();
+  var estrelas=document.getElementById('mDepoEstrelas').value;
+  if(!nome||!texto){toast('Preencha nome e depoimento!','error');return;}
+  // Adiciona no site
+  var iniciais=nome.split(' ').map(function(n){return n[0];}).join('').slice(0,2).toUpperCase();
+  var novoDepo='<div class="depo-card"><div class="depo-aspas">"</div><div class="depo-texto">'+texto+'</div><div class="depo-autor"><div class="depo-avatar">'+iniciais+'</div><div><div class="depo-nome">'+nome+'</div><div class="depo-local">📍 '+cidade+'</div><div class="depo-estrelas">'+estrelas+'</div></div></div></div>';
+  document.getElementById('depoGrid').insertAdjacentHTML('afterbegin',novoDepo);
+  // Adiciona no admin
+  var novoAdmin='<div class="depo-admin-card"><div style="font-size:1.5rem;">⭐</div><div class="depo-admin-info"><div class="depo-admin-nome">'+nome+' — '+cidade+' '+estrelas+'</div><div class="depo-admin-texto">'+texto+'</div></div><div class="action-btns"><button class="action-btn del">🗑</button></div></div>';
+  document.getElementById('depoAdminBody').insertAdjacentHTML('afterbegin',novoAdmin);
+  document.getElementById('modalDepoAdmin').classList.remove('open');
+  toast('Avaliação adicionada!','success');
+  addLog('⭐','Nova avaliação: '+nome);
+});
+
+// Configs
+document.getElementById('btnSaveConfig').addEventListener('click',function(){
+  toast('Configurações salvas!','success');
+  addLog('⚙️','Configurações atualizadas');
+});
+
+// Banner add
+document.getElementById('btnAddBanner').addEventListener('click',function(){
+  var titulo=prompt('Título do banner:');
+  if(!titulo)return;
+  var html='<div class="banner-card"><div style="font-size:1.5rem;">🎯</div><div class="banner-info"><div class="banner-titulo">'+titulo+'</div><div class="banner-sub">Ativo · Home page</div></div><span class="badge-status badge-ativo">Ativo</span><div class="action-btns"><button class="action-btn del">🗑</button></div></div>';
+  document.getElementById('bannersBody').insertAdjacentHTML('afterbegin',html);
+  toast('Banner criado!','success');
+  addLog('🎯','Novo banner: '+titulo);
+});
 
 })();
 </script>
